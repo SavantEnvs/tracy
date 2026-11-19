@@ -1,0 +1,10 @@
+{"traceEvents":[
+{"ph":"M","name":"thread_name","pid":1,"tid":10,"args":{"name":"main"}},
+{"ph":"B","name":"load","pid":1,"tid":10,"ts":100},
+{"ph":"X","name":"parse","pid":1,"tid":10,"ts":110,"dur":40,"args":{"file":"a.json"}},
+{"ph":"E","pid":1,"tid":10,"ts":200},
+{"ph":"X","name":"parse","pid":1,"tid":10,"ts":300,"dur":60},
+{"ph":"i","name":"hello world","pid":1,"tid":10,"ts":250},
+{"ph":"C","name":"mem","pid":1,"tid":10,"ts":120,"args":{"heap":10,"stack":2}},
+{"ph":"C","name":"mem","pid":1,"tid":10,"ts":220,"args":{"heap":20,"stack":3}}
+]}

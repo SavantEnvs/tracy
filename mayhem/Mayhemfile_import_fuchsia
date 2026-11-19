@@ -1,0 +1,10 @@
+project: savantenvs/tracy
+target: import_fuchsia
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/import_fuchsia/testsuite
+cmds:
+  # upstream's tracy-import-fuchsia CLI (AFL-instrumented); writes the converted trace to ./out.tracy
+  - cmd: /mayhem/tracy-import-fuchsia @@ out.tracy
+    afl: true
+    timeout: 5

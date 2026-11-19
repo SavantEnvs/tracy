@@ -1,0 +1,10 @@
+project: savantenvs/tracy
+target: import_chrome
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/import_chrome/testsuite
+cmds:
+  # upstream's tracy-import-chrome CLI (AFL-instrumented); writes the converted trace to ./out.tracy
+  - cmd: /mayhem/tracy-import-chrome @@ out.tracy
+    afl: true
+    timeout: 5
